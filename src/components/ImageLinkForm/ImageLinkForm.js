@@ -6,7 +6,7 @@ const ImageLinkForm =({onInputChange, onButtonSubmit}) => {
     return (
         <div>
             <p className='f3'>
-                {'This mage brain will detext faces in you pictures. give it a try!'}
+                {'This face finder will detect faces in your pictures. give it a try!'}
             </p>
             <div className='center'>
                 <div className='center pa4 br3 shadow-5 form'>
