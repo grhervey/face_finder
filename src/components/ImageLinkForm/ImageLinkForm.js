@@ -6,12 +6,12 @@ const ImageLinkForm =({onInputChange, onButtonSubmit}) => {
     return (
         <div>
             <p className='f3'>
-                {'This face finder will detect faces in your pictures. give it a try!'}
+                {'This face finder will detect faces in your JPG image links. Give it a try!'}
             </p>
             <div className='center'>
                 <div className='center pa4 br3 shadow-5 form'>
                     <input className='f4 pa2 w-70 center' type='tex' onChange={onInputChange} />
-                    <button className='w-30 grow f4 link ph3 pv2 dib white bg-light-purple'
+                    <button className='w-30 grow f4 link ph3 pv2 dib white bg-blue hover-bg-black hover-white'
                     onClick={onButtonSubmit}>Detect</button>
                 </div>
             </div>
