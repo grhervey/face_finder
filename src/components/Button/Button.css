@@ -13,9 +13,10 @@
     transition: all .2s ease-in-out;
     margin: .2rem 1rem;
     border: 1px solid #eac67a;
+
 }
 
 .button1:hover {
-    color: #eac67a;
+    background: #eac67a;
 }
 
