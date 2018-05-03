@@ -1,15 +1,18 @@
-
-.input-container input {
+.input-detect-container {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.input-detect-container input {
     border: 0;
     outline: 0;
     background: transparent;
     border-bottom: 2px solid #eac67a;
     height: 4rem;
     width: 20rem;
-    margin: 1rem 2rem;
-}
-.detect {
-    margin: 1rem;
+    padding-bottom: 0;
+    margin: 0rem 2rem;
 }
 
 

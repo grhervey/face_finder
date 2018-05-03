@@ -5,7 +5,7 @@ const Rank =({name, entries}) => {
     return (
         <div className='rank-text'>
             <div className=''>
-            {`${name}, your current entry count is . . .`}
+            {`Welcome ${name}! `}
             </div>
             {name === 'Guest' ?
             <div className=''>
@@ -13,7 +13,7 @@ const Rank =({name, entries}) => {
             </div>
             :
             <div className=''>
-            {entries}
+            {` Number of images entered: ${entries}`}
             </div>
 
             }

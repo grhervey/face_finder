@@ -7,17 +7,20 @@
   text-align: center;
   background: #e8e8e8;
 }
-.header2 .title {
+.header2 .title{
   font-size: 3rem;
   font-variant:small-caps;
-  opacity: 0;
-  transition: all 1s ease-in-out;
+  animation: fadein 2.5s;
+}
+.header2 .subtitle {
+
+   animation: fadein 1s;
+}
+@keyframes fadein {
+  from{opacity: 0;}
+  to{opacity:1;}
 }
 
-.header2 .subtitle {
-  opacity: 0;
-  transition: all 3s ease-in-out;
-}
 .header2 {
   width:100%;
   height: 100%;
@@ -26,9 +29,7 @@
   justify-content: center;
   align-items: center;
 }
-.header2:hover .title, .header2:hover .subtitle {
-  opacity: 1;
-}
+
 .header3 {
   width:100%;
   height: 100%;

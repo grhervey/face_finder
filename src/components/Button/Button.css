@@ -7,14 +7,15 @@
     padding: 1rem 0;
     background: transparent;
     cursor: pointer;
-    width: 150px;
-    height: 25px;
+    width: 125px;
+    height: 15px;
     font-size: 25px;
     transition: all .2s ease-in-out;
-    margin: 0 1rem;
+    margin: .2rem 1rem;
+    border: 1px solid #eac67a;
 }
 
 .button1:hover {
-    color: #808080;
+    color: #eac67a;
 }
 
