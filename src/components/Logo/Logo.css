@@ -8,14 +8,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    opacity: .8;
+    opacity: .5;
     border: 5px solid #984b43;
-    transition: all 1s ease-in-out;
+    transition: all .5s ease-in-out;
 
 }
 .logo:hover {
-    transform:scale(1.1);
-    border: 5px solid #e8e8e8;
+   /* border: 5px solid #ffffff;*/
     opacity:1.1;
 
 }

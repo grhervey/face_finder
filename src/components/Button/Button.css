@@ -10,10 +10,8 @@
     width: 150px;
     height: 25px;
     font-size: 25px;
-    /*border-bottom: 2px solid #e8e8e8;*/
-    /*border: 2px solid transparent;*/
     transition: all .2s ease-in-out;
-    margin: 1rem;
+    margin: 0 1rem;
 }
 
 .button1:hover {
