@@ -1,0 +1,20 @@
+.nav-container {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+}
+.nav-title {
+    cursor: pointer;
+    font-style: bold;
+    font-variant: small-caps;
+    margin-left:3rem;
+}
+.button-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin:1rem;
+}

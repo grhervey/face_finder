@@ -1,18 +1,27 @@
 import React from 'react';
+import './Navigation.css';
+import Button from '../Button/Button';
 
 const Navigation =({onRouteChange, isSignedIn}) => {
         if (isSignedIn) {
             return (
-                <nav style={{display: 'flex', justifyContent: 'flex-end'}}>
-                    <p onClick={() => onRouteChange('signout')} className='f3 link dim white pa3 pointer'>Sign Out</p>
-                </nav>
+                <div className='nav-container'>
+                    <h1 className='nav-title' onClick={() => onRouteChange('entry')}>Face Finder</h1>
+                    <div className='button-container'>
+                        <Button label='sign out' onClick={() => onRouteChange('signout')}/>
+
+                    </div>
+                </div>
             );
         } else {
             return (
-                <nav style={{display: 'flex', justifyContent: 'flex-end'}}>
-                    <p onClick={() => onRouteChange('signin')} className='f3 link dim white pa3 pointer'>Sign In</p>
-                    <p onClick={() => onRouteChange('register')} className='f3 link dim white pa3 pointer'>Register</p>
-                </nav>
+                <div className='nav-container'>
+                    <h1 className='nav-title' onClick={() => onRouteChange('entry')}>Face Finder</h1>
+                    <div className='button-container'>
+                        <Button label='sign in' onClick={() => onRouteChange('signin')}/>
+                        <Button label='register' onClick={() => onRouteChange('register')}/>
+                    </div>
+                </div>
             );
         }
 }

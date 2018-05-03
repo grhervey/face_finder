@@ -1,4 +1,25 @@
-.Tilt {
-    margin-left: 1rem;
-    background: linear-gradient(135deg, #2954d3 0%, #ffffff 100%);
+.logo {
+    cursor: pointer;
+    height: 300px;
+    width: 300px;
+    background: radial-gradient( #eac67a 0%, #eac67a 50%, #984b43 100%);
+    border-radius: 999px;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: .8;
+    border: 5px solid #984b43;
+    transition: all 1s ease-in-out;
+
+}
+.logo:hover {
+    transform:scale(1.1);
+    border: 5px solid #e8e8e8;
+    opacity:1.1;
+
+}
+.logo img{
+    width:200px;
+    height: 200px;
 }

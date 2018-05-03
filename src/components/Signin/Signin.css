@@ -1,0 +1,49 @@
+.super-container {
+    height: 33%%;
+    width: 66%;
+    background: transparent;
+}
+.article-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form-container {
+    border: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+}
+.header {
+    font-size: 3rem;
+    color: #18121e;
+    font-weight: bold;
+}
+.input-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-flow: row wrap;
+}
+.form-label {
+    font-weight: bold;
+}
+.input-container input {
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 2px solid #18121e;
+    height: 2rem;
+    width: 20rem;
+
+}
+.buttons {
+    display: flex;
+    width: 20rem;
+    justify-content: center;
+    align-items: center;
+}
+
+

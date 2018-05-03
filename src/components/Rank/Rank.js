@@ -1,15 +1,22 @@
 import React from 'react';
-
+import './Rank.css';
 
 const Rank =({name, entries}) => {
     return (
-        <div>
-            <div className='white f3'>
+        <div className='rank-text'>
+            <div className=''>
             {`${name}, your current entry count is . . .`}
             </div>
-            <div className='white f1'>
+            {name === 'Guest' ?
+            <div className=''>
+            <p>Try as much as you'd like!</p>
+            </div>
+            :
+            <div className=''>
             {entries}
             </div>
+
+            }
         </div>
 
     );

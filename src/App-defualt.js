@@ -1,27 +1,38 @@
 import React, { Component } from 'react';
-import './App.css';
-
 import Navigation from './components/Navigation/Navigation';
 import Logo from './components/Logo/Logo';
 import ImageLinkForm from './components/ImageLinkForm/ImageLinkForm';
 import FaceRecognition from './components/FaceRecognition/FaceRecognition';
 import Rank from './components/Rank/Rank';
-
+import './App.css';
+import Particles from 'react-particles-js';
 import Signin from './components/Signin/Signin';
 import Register from './components/Register/Register';
 
 
+
+const particlesOptions = {
+                particles: {
+                  line_linked: {
+                    shadow: {
+                      enable: true,
+                      color: "#000000",
+                      blur: 5
+                    }
+                  }
+                }
+              }
+
 const initialState = {
   input: '',
   imageUrl: '',
-  validUrl: true,
+  validUrl: false,
   box: {},
-  route: 'entry',
+  route: 'signin',
   isSignedIn: false,
-  guest: true,
   user: {
     id: '',
-    name: 'Guest',
+    name: '',
     email: '',
     entries: 0,
     joined: ''
@@ -106,7 +117,7 @@ class App extends Component {
   }
 
   onRouteChange=(route) => {
-    if (route === 'signout' || route === 'entry' || route === 'signin') {
+    if (route === 'signout') {
       this.setState(initialState)
     } else if (route === 'home') {
       this.setState({isSignedIn: true})
@@ -115,13 +126,16 @@ class App extends Component {
   }
 
   render() {
-
     return (
       <div className="App">
-        <Navigation style={{width: '100%'}} onRouteChange={this.onRouteChange} isSignedIn={this.state.isSignedIn}/>
-        <div className='page-content'>
-        {this.state.route ==='home' ?
-          <div className='header3'>
+        <div className="header2">
+          <Logo className='logo'/>
+          <h1 className='title'>Face Finder</h1>
+        </div>
+        {this.state.route === 'home'
+          ? <div>
+              <Navigation  isSignedIn={this.state.isSignedIn} onRouteChange={this.onRouteChange}/>
+                <Logo />
                 <Rank name={this.state.user.name} entries={this.state.user.entries}/>
                 <ImageLinkForm
                 onInputChange={this.onInputChange}
@@ -131,18 +145,12 @@ class App extends Component {
                   <p>Please enter a Valid link to a JPG image.</p>
                 }
             </div>
-         :
-         this.state.route === 'signin'?
-          <Signin loadUser={this.loadUser} onRouteChange={this.onRouteChange}/>
-          : this.state.route === 'register'?
-          <Register loadUser={this.loadUser} onRouteChange={this.onRouteChange}/>
-          :
-          <div className="header2">
-            <h1 className='title'>Face Finder</h1>
-            <Logo className='logo' onClick={this.onRouteChange}/>
-            <h2 className='subtitle'>Click to try the image recognition!</h2>
-          </div>}
-        </div>
+          : (this.state.route === 'signin' || this.state.route === 'signout'
+              ?  <Signin loadUser={this.loadUser} onRouteChange={this.onRouteChange}/>
+              :  <Register loadUser={this.loadUser} onRouteChange={this.onRouteChange}/>
+            )
+
+            }
       </div>
     );
   }
